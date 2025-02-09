@@ -1,0 +1,13 @@
+services:
+  ipfs:
+    image: ipfs/kubo
+    container_name: ipfs-node
+    ports:
+      - "5001:5001" # API Port
+      - "8080:8080" # Gateway Port
+    volumes:
+      - ./data/ipfs:/data/ipfs
+    restart: unless-stopped
+    environment:
+      - IPFS_API=http://localhost:5001
+
