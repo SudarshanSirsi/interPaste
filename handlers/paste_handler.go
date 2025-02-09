@@ -1,7 +1,6 @@
 package handlers
 
 import (
-	"fmt"
 	"interPaste/services"
 	"net/http"
 
